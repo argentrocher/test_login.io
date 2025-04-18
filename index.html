@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion test</title>
+</head>
+<body>
+  <h2>Connexion sécurisée test</h2>
+  <form method="POST" action="https://tonsite.awardspace.info/verif.php">
+    <input type="password" name="mdp" placeholder="Mot de passe" required>
+    <button type="submit">Se connecter</button>
+  </form>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("error")) {
+      alert("Mot de passe incorrect !");
+    }
+  </script>
+</body>
+</html>
